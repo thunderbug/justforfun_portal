@@ -5,11 +5,13 @@
         <div class="block-container" data-xf-init="lightbox">
             <h4 class="block-header">{$server.hostname|raw}
 
-                <div class="buttonGroup">
-                    <div class="buttonGroup-buttonWrapper">
-                        <button type="button" class="button--link menuTrigger button" data-xf-click="menu"><span class="button-text">Actions</span></button>
+                <xf:if is="{{ $xf.visitor.hasPermission('justforfunPortal', 'canrestartserver') }}">
+                    <div class="buttonGroup">
+                        <div class="buttonGroup-buttonWrapper">
+                            <button type="button" class="button--link menuTrigger button" data-xf-click="menu"><span class="button-text">Actions</span></button>
+                        </div>
                     </div>
-                </div>
+                </xf:if>
             </h4>
             <div class="block-body block-row">
                 <p>
