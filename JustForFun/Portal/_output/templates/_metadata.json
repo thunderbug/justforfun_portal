@@ -1,7 +1,17 @@
 {
+    "public/justforfun_macros.html": {
+        "version_id": 1000100,
+        "version_string": "1.0.1",
+        "hash": "de45626e671170814382616276b7820b"
+    },
     "public/justforfun_server_restart_view.html": {
         "version_id": 1000100,
         "version_string": "1.0.1",
-        "hash": "25ec4bd375d0271d90983a2768e71991"
+        "hash": "910a39bcb33088e9a7d49dd7a9af74c8"
+    },
+    "public/justforfun_server_status.html": {
+        "version_id": 1000100,
+        "version_string": "1.0.1",
+        "hash": "28e9af85f312a5ad8a71b3b02ea6f197"
     }
 }

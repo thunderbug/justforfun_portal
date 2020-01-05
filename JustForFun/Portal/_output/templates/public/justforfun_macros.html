@@ -1,0 +1,5 @@
+<xf:macro name="server_menu" arg-server="!" arg-context="!">
+    <xf:if is="{{ $xf.visitor.hasPermission('justforfunPortal', 'canrestartserver') }}">
+        <a href="{{ link('server').$server }}/status/"  class="menu-linkRow" data-xf-click="overlay">Status</a>
+    </xf:if>
+</xf:macro>

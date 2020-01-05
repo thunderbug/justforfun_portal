@@ -29,8 +29,18 @@ class PortalCron
                     $server_cache = $server_cache->first();
                 }
 
-                $json = json_encode(StatusRetriever::get($server_expl[0], (int)$server_expl[1])->toArray());
+                $status = StatusRetriever::get($server_expl[0], (int)$server_expl[1]);
+                if($status == null) {
+                    $json = json_decode($server_cache->get("data"), true);
+                    $json["online"] = false;
+                    $json = json_encode($json);
+                } else {
+                    $json = json_encode($status->toArray());
+
+                }
+
                 $server_cache->set("data", $json);
+
                 $server_cache->set("date", time());
 
                 $server_cache->save(false);

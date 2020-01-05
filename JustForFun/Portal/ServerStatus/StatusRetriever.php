@@ -29,7 +29,7 @@ class StatusRetriever
      * @param $port int
      * @return Status
      */
-    public static function get($ip, $port) : Status
+    public static function get($ip, $port) : ?Status
     {
         $session = @fsockopen("udp://".$ip, $port, $errno, $errstr, 30);
 

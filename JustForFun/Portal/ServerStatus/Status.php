@@ -41,6 +41,11 @@ class Status
         $this->gamename = $gamename;
     }
 
+    public function getID()
+    {
+        return str_replace(".", "_", $this->ip)."-".$this->port;
+    }
+
     /**
      * @return string
      */
@@ -108,7 +113,8 @@ class Status
             "gametype" => $this->gametype,
             "players" => $this->players,
             "maxplayers" => $this->maxplayers,
-            "gamename" => $this->gamename
+            "gamename" => $this->gamename,
+            "ID" => $this->getID()
         );
     }
 

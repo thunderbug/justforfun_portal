@@ -1,8 +1,8 @@
 {
     "cron_entry.updateServerList.txt": {
         "global_cache": false,
-        "version_id": 100,
-        "version_string": "1.0.0",
+        "version_id": 1000100,
+        "version_string": "1.0.1",
         "hash": "b1a61bd69390fc77f0e4d5b389f196bf"
     },
     "nav.servers.txt": {
