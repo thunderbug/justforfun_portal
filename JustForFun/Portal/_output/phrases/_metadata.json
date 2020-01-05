@@ -37,14 +37,14 @@
     },
     "permission.justforfunPortal_canrestartserver.txt": {
         "global_cache": false,
-        "version_id": 100,
-        "version_string": "1.0.0",
+        "version_id": 1000100,
+        "version_string": "1.0.1",
         "hash": "871c43ac56f48344113a4812139bc67b"
     },
     "permission_interface.justforfunPortalPermissions.txt": {
         "global_cache": false,
-        "version_id": 100,
-        "version_string": "1.0.0",
-        "hash": "39d70b3406c74d196ee3cfae087b4fd3"
+        "version_id": 1000100,
+        "version_string": "1.0.1",
+        "hash": "3024ce30e483879f7d7dd250558b090a"
     }
 }
