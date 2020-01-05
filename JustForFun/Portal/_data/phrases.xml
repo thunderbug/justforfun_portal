@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phrases>
+  <phrase title="nav.servers" version_id="100" version_string="1.0.0"><![CDATA[Servers]]></phrase>
+  <phrase title="option.server_list" version_id="100" version_string="1.0.0"><![CDATA[Server List]]></phrase>
+  <phrase title="option_explain.server_list" version_id="100" version_string="1.0.0"><![CDATA[List all servers of JFF, split IP's with ;]]></phrase>
+  <phrase title="option_group.JustForFun_Portal" version_id="100" version_string="1.0.0"><![CDATA[JustForFun Portal]]></phrase>
+  <phrase title="option_group_description.JustForFun_Portal" version_id="100" version_string="1.0.0"><![CDATA[]]></phrase>
+</phrases>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<options>
+  <option option_id="server_list" edit_format="textbox" data_type="string">
+    <default_value></default_value>
+    <relation group_id="JustForFun_Portal" display_order="1"/>
+  </option>
+</options>

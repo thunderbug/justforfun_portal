@@ -1,0 +1,29 @@
+<xf:title>Server Manager</xf:title>
+
+<xf:foreach loop="$servers" value="$server">
+    <div class="block">
+        <div class="block-container" data-xf-init="lightbox">
+            <h4 class="block-header">{$server.hostname|raw}
+
+                <div class="buttonGroup">
+                    <div class="buttonGroup-buttonWrapper">
+                        <button type="button" class="button--link menuTrigger button" data-xf-click="menu"><span class="button-text">Actions</span></button>
+                    </div>
+                </div>
+            </h4>
+            <div class="block-body block-row">
+                <p>
+                    Status: <span style="color: green;">Online</span><br />
+                    Game: {$server.gamename}<br />
+                    IP: {$server.ip}:{$server.port}<br />
+                    Map: {$server.map}<br />
+                    Gametype: {$server.gametype}<br />
+                    Players: {$server.players}/{$server.maxplayers}<br />
+                </p>
+            </div>
+            <div class="block-footer">
+                Lastupdate: <xf:date time="{$server.lastupdate}" />
+            </div>
+        </div>
+    </div>
+</xf:foreach>

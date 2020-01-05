@@ -1,0 +1,1 @@
+List all servers of JFF, split IP's with ;

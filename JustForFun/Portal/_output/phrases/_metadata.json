@@ -1,0 +1,38 @@
+{
+    "cron_entry.updateServerList.txt": {
+        "global_cache": false,
+        "version_id": 100,
+        "version_string": "1.0.0",
+        "hash": "b1a61bd69390fc77f0e4d5b389f196bf"
+    },
+    "nav.servers.txt": {
+        "global_cache": false,
+        "version_id": 100,
+        "version_string": "1.0.0",
+        "hash": "ac659513b2353187192e88c5d1988228"
+    },
+    "option.server_list.txt": {
+        "global_cache": false,
+        "version_id": 100,
+        "version_string": "1.0.0",
+        "hash": "31fc49dd60e1f0eaf73fd5105c190600"
+    },
+    "option_explain.server_list.txt": {
+        "global_cache": false,
+        "version_id": 100,
+        "version_string": "1.0.0",
+        "hash": "c71630520c6bdd372e71bdbb5dd176b5"
+    },
+    "option_group.JustForFun_Portal.txt": {
+        "global_cache": false,
+        "version_id": 100,
+        "version_string": "1.0.0",
+        "hash": "3024ce30e483879f7d7dd250558b090a"
+    },
+    "option_group_description.JustForFun_Portal.txt": {
+        "global_cache": false,
+        "version_id": 100,
+        "version_string": "1.0.0",
+        "hash": "d41d8cd98f00b204e9800998ecf8427e"
+    }
+}
