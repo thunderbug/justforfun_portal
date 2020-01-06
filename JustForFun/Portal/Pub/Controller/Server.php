@@ -4,6 +4,7 @@
 namespace JustForFun\Portal\Pub\Controller;
 
 use JustForFun\Portal\ServerStatus\StatusRetriever;
+use JustForFun\Portal\SSH\SSH;
 use XF\Mvc\ParameterBag;
 use XF\Pub\Controller\AbstractController;
 
@@ -31,6 +32,9 @@ class Server extends AbstractController
         $server = $parameterBag->get("server");
         $server_ip = str_replace(array("_", "-"), array(".", ":"), $server);
 
-        return $this->view("JustForFun\ServerRestart:Status", "justforfun_server_status", array("server" => $server_ip));
+        $ssh = new SSH($server_ip);
+        $status = SSH::convertCLIcolortoHTML($ssh->execute($ssh->getGameserverLocation()." monitor"));
+
+        return $this->view("JustForFun\ServerRestart:Status", "justforfun_server_status", array("server" => $server_ip, "status" => $status));
     }
 }
