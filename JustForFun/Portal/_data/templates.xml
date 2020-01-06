@@ -1,14 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <templates>
-  <template type="public" title="justforfun_server_restart_view" version_id="100" version_string="1.0.0"><![CDATA[<xf:title>Server Manager</xf:title>
+  <template type="public" title="justforfun_macros" version_id="1000100" version_string="1.0.1"><![CDATA[<xf:macro name="server_menu" arg-server="!" arg-context="!">
+    <xf:if is="{{ $xf.visitor.hasPermission('justforfunPortal', 'canstatusserver') }}">
+        <a href="{{ link('server').$server }}/status/"  class="menu-linkRow" data-xf-click="overlay">Status</a>
+    </xf:if>
+    <xf:if is="{{ $xf.visitor.hasPermission('justforfunPortal', 'canrestartserver') }}">
+        <a href="{{ link('server').$server }}/restart/"  class="menu-linkRow" data-xf-click="overlay">Restart</a>
+    </xf:if>
+    <xf:if is="{{ $xf.visitor.hasPermission('justforfunPortal', 'canstartstopserver') }}">
+        <a href="{{ link('server').$server }}/start/"  class="menu-linkRow" data-xf-click="overlay">Start</a>
+    </xf:if>
+    <xf:if is="{{ $xf.visitor.hasPermission('justforfunPortal', 'canstartstopserver') }}">
+        <a href="{{ link('server').$server }}/stop/"  class="menu-linkRow" data-xf-click="overlay">Stop</a>
+    </xf:if>
+</xf:macro>]]></template>
+  <template type="public" title="justforfun_server_restart_view" version_id="1000100" version_string="1.0.1"><![CDATA[<xf:title>Server Manager</xf:title>
 
 <xf:foreach loop="$servers" value="$server">
     <div class="block">
         <div class="block-container" data-xf-init="lightbox">
-            <h4 class="block-header">{$server.hostname|raw}</h4>
+            <h4 class="block-header">{$server.hostname|raw}
+                <div class="memberTooltip-headerAction" style="display:inline;">
+                    <xf:if contentcheck="true">
+                        <xf:button class="button--link button--small menuTrigger"
+                                   data-xf-click="menu"
+                                   aria-label="{{ phrase('more_options') }}"
+                                   aria-expanded="false"
+                                   aria-haspopup="true">
+                            <xf:fa icon="fa-cog" />
+                        </xf:button>
+
+                        <div class="menu" data-menu="menu" aria-hidden="true">
+                            <div class="menu-content">
+                                <h3 class="menu-header">Options</h3>
+                                <xf:contentcheck>
+                                    <xf:macro template="justforfun_macros" name="server_menu" arg-server="{$server.ID}" arg-context="tooltip" />
+                                </xf:contentcheck>
+                            </div>
+                        </div>
+                    </xf:if>
+                </div>
+
+            </h4>
             <div class="block-body block-row">
                 <p>
-                    Status: <span style="color: green;">Online</span><br />
+                    <xf:if is="$server.online">
+                        Status: <span style="color: green;">Online</span><br />
+                    <xf:else />
+                        Status: <span style="color: red;">Offline</span><br />
+                    </xf:if>
+                    Game: {$server.gamename}<br />
                     IP: {$server.ip}:{$server.port}<br />
                     Map: {$server.map}<br />
                     Gametype: {$server.gametype}<br />
@@ -21,4 +62,11 @@
         </div>
     </div>
 </xf:foreach>]]></template>
+  <template type="public" title="justforfun_server_status" version_id="1000100" version_string="1.0.1"><![CDATA[<xf:title>Server Status: {{ $server }}</xf:title>
+
+<div class="block">
+    <div class="block-container">
+        <div class="block-body">{{ $status|raw }}</div>
+    </div>
+</div>]]></template>
 </templates>

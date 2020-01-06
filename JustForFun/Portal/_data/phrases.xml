@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <phrases>
+  <phrase title="cron_entry.updateServerList" version_id="1000100" version_string="1.0.1"><![CDATA[Update Serverlist]]></phrase>
   <phrase title="nav.servers" version_id="100" version_string="1.0.0"><![CDATA[Servers]]></phrase>
   <phrase title="option.server_list" version_id="100" version_string="1.0.0"><![CDATA[Server List]]></phrase>
   <phrase title="option_explain.server_list" version_id="100" version_string="1.0.0"><![CDATA[List all servers of JFF, split IP's with ;]]></phrase>
   <phrase title="option_group.JustForFun_Portal" version_id="100" version_string="1.0.0"><![CDATA[JustForFun Portal]]></phrase>
   <phrase title="option_group_description.JustForFun_Portal" version_id="100" version_string="1.0.0"><![CDATA[]]></phrase>
+  <phrase title="permission.justforfunPortal_canrestartserver" version_id="1000100" version_string="1.0.1"><![CDATA[Can restart gameserver (via ssh)]]></phrase>
+  <phrase title="permission.justforfunPortal_canstartstopserver" version_id="1000100" version_string="1.0.1"><![CDATA[Can start/stop gameserver (via ssh)]]></phrase>
+  <phrase title="permission.justforfunPortal_canstatusserver" version_id="1000100" version_string="1.0.1"><![CDATA[Allow to send status command to the gameserver (via ssh)]]></phrase>
+  <phrase title="permission_interface.justforfunPortalPermissions" version_id="1000100" version_string="1.0.1"><![CDATA[JustForFun Portal]]></phrase>
 </phrases>

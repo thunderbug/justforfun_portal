@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <routes>
-  <route route_type="public" route_prefix="server" controller="JustForFun\Portal:Server" context="server"/>
+  <route route_type="public" route_prefix="server" format=":str&lt;server&gt;" controller="JustForFun\Portal:Server" context="server"/>
 </routes>
