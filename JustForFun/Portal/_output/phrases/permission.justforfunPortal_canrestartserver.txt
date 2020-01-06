@@ -1,1 +1,1 @@
-Can restart gameserver
+Can restart gameserver (via ssh)

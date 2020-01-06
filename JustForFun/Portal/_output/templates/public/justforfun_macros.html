@@ -1,5 +1,14 @@
 <xf:macro name="server_menu" arg-server="!" arg-context="!">
-    <xf:if is="{{ $xf.visitor.hasPermission('justforfunPortal', 'canrestartserver') }}">
+    <xf:if is="{{ $xf.visitor.hasPermission('justforfunPortal', 'canstatusserver') }}">
         <a href="{{ link('server').$server }}/status/"  class="menu-linkRow" data-xf-click="overlay">Status</a>
+    </xf:if>
+    <xf:if is="{{ $xf.visitor.hasPermission('justforfunPortal', 'canrestartserver') }}">
+        <a href="{{ link('server').$server }}/restart/"  class="menu-linkRow" data-xf-click="overlay">Restart</a>
+    </xf:if>
+    <xf:if is="{{ $xf.visitor.hasPermission('justforfunPortal', 'canstartstopserver') }}">
+        <a href="{{ link('server').$server }}/start/"  class="menu-linkRow" data-xf-click="overlay">Start</a>
+    </xf:if>
+    <xf:if is="{{ $xf.visitor.hasPermission('justforfunPortal', 'canstartstopserver') }}">
+        <a href="{{ link('server').$server }}/stop/"  class="menu-linkRow" data-xf-click="overlay">Stop</a>
     </xf:if>
 </xf:macro>

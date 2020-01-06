@@ -1,0 +1,1 @@
+Allow to send status command to the gameserver (via ssh)

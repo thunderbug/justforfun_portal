@@ -39,7 +39,19 @@
         "global_cache": false,
         "version_id": 1000100,
         "version_string": "1.0.1",
-        "hash": "871c43ac56f48344113a4812139bc67b"
+        "hash": "ef6fad82cdeb3f2d4e850c31b3c506f0"
+    },
+    "permission.justforfunPortal_canstartstopserver.txt": {
+        "global_cache": false,
+        "version_id": 1000100,
+        "version_string": "1.0.1",
+        "hash": "1e9e751faad15cd08f3966878bb38f05"
+    },
+    "permission.justforfunPortal_canstatusserver.txt": {
+        "global_cache": false,
+        "version_id": 1000100,
+        "version_string": "1.0.1",
+        "hash": "94efd640a1469d532947cf3291eeb559"
     },
     "permission_interface.justforfunPortalPermissions.txt": {
         "global_cache": false,

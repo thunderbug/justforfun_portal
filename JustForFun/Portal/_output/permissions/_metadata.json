@@ -1,5 +1,11 @@
 {
     "justforfunPortal-canrestartserver.json": {
         "hash": "5e51c9fe92995711009d41ce0f745802"
+    },
+    "justforfunPortal-canstartstopserver.json": {
+        "hash": "05137f87fdca640d43029e4f0d45997d"
+    },
+    "justforfunPortal-canstatusserver.json": {
+        "hash": "4413eb2560273a3c22d1384e8889047f"
     }
 }

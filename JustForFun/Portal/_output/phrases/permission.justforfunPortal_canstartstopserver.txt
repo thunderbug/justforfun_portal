@@ -1,0 +1,1 @@
+Can start/stop gameserver (via ssh)
