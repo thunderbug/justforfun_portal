@@ -19,10 +19,12 @@ class Setup extends AbstractSetup
 	public function installStep1()
     {
         $this->schemaManager()->createTable("xf_jff_log_restart", function (Create $table) {
-            $table->addColumn("restart_id", "int");
+            $table->addColumn("action_id", "int")->autoIncrement();
             $table->addColumn("user_id", "int");
+            $table->addColumn("server_id", "int");
             $table->addColumn("date" , "int");
-            $table->addPrimaryKey("restart_id");
+            $table->addColumn("action" , "varchar", "10");
+            $table->addPrimaryKey("action_id");
         });
     }
 
@@ -40,6 +42,20 @@ class Setup extends AbstractSetup
     public function upgrade1000100Step1()
     {
 	    //nothing to do yet
+    }
+
+    public function upgrade1000200Step1()
+    {
+        $this->schemaManager()->dropTable("xf_jff_log_restart");
+
+        $this->schemaManager()->createTable("xf_jff_log_restart", function (Create $table) {
+            $table->addColumn("action_id", "int")->autoIncrement();
+            $table->addColumn("user_id", "int");
+            $table->addColumn("server_id", "int");
+            $table->addColumn("date" , "int");
+            $table->addColumn("action" , "varchar", "10");
+            $table->addPrimaryKey("action_id");
+        });
     }
 
     public function uninstallStep1()
