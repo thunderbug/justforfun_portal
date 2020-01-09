@@ -1,4 +1,10 @@
 {
+    "admin_navigation.serverActionLog.txt": {
+        "global_cache": false,
+        "version_id": 1000200,
+        "version_string": "1.0.2",
+        "hash": "d2e7d1c74fd441071e9a77b159e8a61f"
+    },
     "cron_entry.updateServerList.txt": {
         "global_cache": false,
         "version_id": 1000100,
