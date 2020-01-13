@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <phrases>
+  <phrase title="admin_navigation.serverActionLog" version_id="1000200" version_string="1.0.2"><![CDATA[Server Actions log]]></phrase>
   <phrase title="cron_entry.updateServerList" version_id="1000100" version_string="1.0.1"><![CDATA[Update Serverlist]]></phrase>
   <phrase title="nav.servers" version_id="100" version_string="1.0.0"><![CDATA[Servers]]></phrase>
   <phrase title="option.server_list" version_id="100" version_string="1.0.0"><![CDATA[Server List]]></phrase>

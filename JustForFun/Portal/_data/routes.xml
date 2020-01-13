@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <routes>
+  <route route_type="admin" route_prefix="logs" sub_name="server-actions" format="logs/server-actions" controller="JustForFun\Portal:JustForFunLogs" context="serverActionsLogs"/>
   <route route_type="public" route_prefix="server" format=":str&lt;server&gt;" controller="JustForFun\Portal:Server" context="server"/>
 </routes>
