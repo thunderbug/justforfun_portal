@@ -1,0 +1,50 @@
+<xf:title>Server Actions</xf:title>
+
+<xf:form action="{{ link('logs/logs/server-actions') }}" class="block">
+    <div class="block-container">
+        <div class="block-body block-row">
+			<span>
+				{{ phrase('filter_by_user:') }}
+				<xf:select name="user_id" value="{$userId}" class="input--inline">
+					<xf:option value="0">{{ phrase('any') }}</xf:option>
+					<xf:options source="$logUsers" />
+				</xf:select>
+			</span>
+
+            <xf:button type="submit">{{ phrase('filter') }}</xf:button>
+        </div>
+    </div>
+</xf:form>
+
+<xf:if is="$entries is not empty">
+    <div class="block">
+        <div class="block-container">
+            <div class="block-body">
+                <xf:datalist data-xf-init="responsive-data-list">
+                    <xf:datarow rowtype="header">
+                        <xf:cell>{{ phrase('action') }}</xf:cell>
+                        <xf:cell>Server</xf:cell>
+                        <xf:cell>{{ phrase('user') }}</xf:cell>
+                        <xf:cell>{{ phrase('date') }}</xf:cell>
+                    </xf:datarow>
+                    <xf:foreach loop="$entries" value="$entry">
+                        <xf:datarow>
+                            <xf:cell><div>{$entry.action}</div></xf:cell>
+                            <xf:cell>{$entry.Server.ip}</xf:cell>
+                            <xf:cell><xf:username user="$entry.User" href="{{ link('users/edit', $entry.User) }}" /></xf:cell>
+                            <xf:cell><xf:date time="{$entry.date}" /></xf:cell>
+                        </xf:datarow>
+                    </xf:foreach>
+                </xf:datalist>
+            </div>
+            <div class="block-footer">
+                <span class="block-footer-counter">{{ display_totals($entries, $total) }}</span>
+            </div>
+        </div>
+        <xf:pagenav page="{$page}" perpage="{$perPage}" total="{$total}"
+                    link="logs/moderator" params="{$linkFilters}"
+                    wrapperclass="block-outer block-outer--after" />
+    </div>
+    <xf:else />
+    <div class="blockMessage">{{ phrase('no_entries_have_been_logged') }}</div>
+</xf:if>

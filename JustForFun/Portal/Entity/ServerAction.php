@@ -19,7 +19,7 @@ class ServerAction extends Entity
             "user_id" => ["type" => self::STR, "required" => true],
             "server_id" => ["type" => self::UINT, "required" => true],
             "date" => ["type" => self::UINT, "default" => time()],
-            "action" => ["type" => self::UINT, "required" => true],
+            "action" => ["type" => self::STR, "required" => true]
         ];
 
         $structure->relations = array(
@@ -31,7 +31,7 @@ class ServerAction extends Entity
             ),
 
             "Server" => array(
-                "entity" => "Addon/JustForFun:Cache_Servers",
+                "entity" => "JustForFun\Portal:Cache_Servers",
                 "type" => self::TO_ONE,
                 "conditions" => "server_id",
                 "key" => "primary"

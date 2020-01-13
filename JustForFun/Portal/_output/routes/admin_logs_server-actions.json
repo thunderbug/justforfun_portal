@@ -1,0 +1,11 @@
+{
+    "route_type": "admin",
+    "route_prefix": "logs",
+    "sub_name": "server-actions",
+    "format": "logs/server-actions",
+    "build_class": "",
+    "build_method": "",
+    "controller": "JustForFun\\Portal:JustForFunLogs",
+    "context": "serverActionsLogs",
+    "action_prefix": ""
+}

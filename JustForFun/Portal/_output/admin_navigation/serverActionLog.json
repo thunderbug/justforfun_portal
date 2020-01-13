@@ -1,6 +1,6 @@
 {
     "parent_navigation_id": "logsMisc",
-    "display_order": 1100,
+    "display_order": 600,
     "link": "logs/server-actions",
     "icon": "",
     "admin_permission_id": "viewLogs",
